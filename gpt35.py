@@ -1,7 +1,8 @@
 import sys
 import json
 import openai
-openai.api_key = "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"
+from secretKeys import OPEN_AI_KEY
+openai.api_key = OPEN_AI_KEY
 
 SYSTEM_SET = {
     "role": "system",

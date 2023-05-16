@@ -1,6 +1,7 @@
 import openai
+from secretKeys import OPEN_AI_KEY
 
-openai.api_key = "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"
+openai.api_key = OPEN_AI_KEY
 
 async def transcribe(filename):
     audio_file = open(filename, "rb")
