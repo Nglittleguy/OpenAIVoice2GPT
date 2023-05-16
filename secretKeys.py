@@ -1,1 +1,0 @@
-OPEN_AI_KEY = "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"
