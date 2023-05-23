@@ -1,6 +1,7 @@
 from audio import record
 from gpt35 import request
 from whisper import transcribe
+from textData import importText
 import asyncio
 import sys
 
