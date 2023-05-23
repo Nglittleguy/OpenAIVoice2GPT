@@ -1,2 +1,6 @@
 secretKeys.py
 conversation-log.json
+recording.wav
+/data/*
+/__pycache__/*
+__pycache__/secretKeys.cpython-310.pyc
