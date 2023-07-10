@@ -1,9 +1,12 @@
 import sys
 import json
 import openai
+import os
 from textData import importText, getCustomerInfo
-from secretKeys import OPEN_AI_KEY
-openai.api_key = OPEN_AI_KEY
+# from secretKeys import OPEN_AI_KEY
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv(), override=True)
+openai.api_key = os.environ.get('OPEN_AI_KEY')
 
 SYSTEM_SET = {
     "role": "system",
