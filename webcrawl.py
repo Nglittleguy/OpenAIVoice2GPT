@@ -12,14 +12,14 @@ apify = ApifyWrapper()
 
 loader = apify.call_actor(
     actor_id="apify/website-content-crawler",
-    run_input={"startUrls": [{"url": "https://en.wikipedia.org/wiki/Threads_(social_network)"}]},
+    run_input={"startUrls": [{"url": "https://www.marriott.com/default.mi"}]},
     dataset_mapping_function=lambda item: Document(
         page_content=item["text"] or "", metadata={"source": item["url"]}
     ),
 )
 
 index = VectorstoreIndexCreator().from_loaders([loader])
-query = "What is the internal name of Threads?"
+query = "What parameters do I need to book a room?"
 result = index.query_with_sources(query)
 
 print(result["answer"])
